@@ -1,0 +1,10 @@
+{
+  "name": "confirm-protocol",
+  "displayName": "Confirm Protocol",
+  "description": "统一结构化确认协议：确认请求、结构化答案、聊天渲染、低风险记忆、批量与审计。",
+  "schemaVersion": "confirm-protocol.skill.request/1.0",
+  "endpoint": "https://cli.tax/Cf8Pr7Tm2Q",
+  "method": "POST",
+  "version": "v7.0.19",
+  "type": "Skill"
+}

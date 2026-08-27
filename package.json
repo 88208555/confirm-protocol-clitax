@@ -1,0 +1,22 @@
+{
+  "bin": {
+    "cli-confirm-protocol": "./cli.mjs"
+  },
+  "description": "Confirm Protocol skill installer for CLI.Tax: structured confirmation requests, answers, memory, batching, and audit.",
+  "files": [
+    "cli.mjs",
+    "installer.mjs",
+    "README.md",
+    "skill/SKILL.md",
+    "skill/skill.json"
+  ],
+  "license": "UNLICENSED",
+  "name": "cli-confirm-protocol",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/88208555/confirm-protocol-clitax.git"
+  },
+  "type": "module",
+  "version": "7.0.19"
+}
