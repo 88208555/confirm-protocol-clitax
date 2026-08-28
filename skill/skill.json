@@ -1,10 +1,10 @@
 {
   "name": "confirm-protocol",
   "displayName": "Confirm Protocol",
-  "description": "统一结构化确认协议：确认请求、结构化答案、聊天渲染、低风险记忆、批量与审计。",
+  "description": "统一结构化确认协议：确认、单选、多选与输入交互，返回校验答案、聊天兼容文本、低风险记忆状态、批次与审计。Unified structured confirmation protocol for confirm, choice, multi-choice, and input interactions with validated answers, chat rendering, low-risk memory state, batches, and audit. Единый протокол структурированного подтверждения для подтверждения, выбора, множественного выбора и ввода с проверенными ответами, текстом для чата, низкорисковой памятью, пакетами и аудитом.",
   "schemaVersion": "confirm-protocol.skill.request/1.0",
   "endpoint": "https://cli.tax/Cf8Pr7Tm2Q",
   "method": "POST",
-  "version": "v7.0.19",
+  "version": "v7.0.25",
   "type": "Skill"
 }
