@@ -5,7 +5,7 @@ description: '把技能需要的用户确认转换为统一 interaction 协议�
 
 # 确认协议 / Confirm Protocol / Протокол подтверждения
 
-Package version: v7.0.29
+Package version: v7.0.30
 
 Endpoint: https://cli.tax/Cf8Pr7Tm2Q
 
