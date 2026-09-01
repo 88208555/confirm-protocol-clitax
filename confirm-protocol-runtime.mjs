@@ -3,7 +3,7 @@ const RESPONSE_SCHEMA = "confirm-protocol.skill.response/1.0";
 const INTERACTION_SCHEMA = "confirm.interaction/1.0";
 const MEMORY_SCHEMA = "confirm.memory-entry/1.0";
 const AUDIT_SCHEMA = "confirm.audit-entry/1.0";
-const COMPILER_VERSION = "v7.0.31";
+const COMPILER_VERSION = "v7.0.32";
 const OPERATIONS = ["capabilities", "help", "interaction-request", "interaction-answer",
   "chat-render", "memory-set", "memory-list", "memory-clear", "batch-request", "audit-query"];
 const INTERACTION_TYPES = new Set(["confirm", "choice", "multi", "input"]);
