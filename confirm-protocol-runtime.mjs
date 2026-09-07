@@ -3,7 +3,7 @@ const RESPONSE_SCHEMA = "confirm-protocol.skill.response/1.0";
 const INTERACTION_SCHEMA = "confirm.interaction/1.0";
 const MEMORY_SCHEMA = "confirm.memory-entry/1.0";
 const AUDIT_SCHEMA = "confirm.audit-entry/1.0";
-const COMPILER_VERSION = "v7.0.35";
+const COMPILER_VERSION = "v7.0.36";
 const OPERATIONS = ["capabilities", "help", "interaction-request", "interaction-answer",
   "chat-render", "memory-set", "memory-list", "memory-clear", "batch-request", "audit-query"];
 const INTERACTION_TYPES = new Set(["confirm", "choice", "multi", "input"]);
@@ -254,13 +254,13 @@ function validateOperationInput(operation, input) {
 }
 function chatCopy(locale) {
   if (locale === undefined || locale === "zh-CN") {
-    return { risk: "风险：", input: "请输入答案。", choice: "请输入选项编号。" };
+    return { risk: "风险：", input: "请输入答案。", choice: "请输入选项 ID。" };
   }
   if (locale === "en-US") {
-    return { risk: "Risk: ", input: "Enter your answer.", choice: "Enter the option number." };
+    return { risk: "Risk: ", input: "Enter your answer.", choice: "Enter an option ID." };
   }
   if (locale === "ru-RU") {
-    return { risk: "Риск: ", input: "Введите ответ.", choice: "Введите номер варианта." };
+    return { risk: "Риск: ", input: "Введите ответ.", choice: "Введите ID варианта." };
   }
   throw new Error(`Unsupported chat locale: ${String(locale)}`);
 }
@@ -268,7 +268,7 @@ function renderChat(interaction, locale) {
   const copy = chatCopy(locale);
   const risk = interaction.risk === "high" ? `\n${copy.risk}${interaction.riskDescription}` : "";
   if (interaction.type === "input") return `${interaction.question}${risk}\n${copy.input}`;
-  const options = interaction.options.map((option, index) => `${index + 1}. ${option.label}${option.hint ? ` — ${option.hint}` : ""}`);
+  const options = interaction.options.map((option) => `${option.id}: ${option.label}${option.hint ? ` — ${option.hint}` : ""}`);
   return `${interaction.question}${risk}\n${options.join("\n")}\n${copy.choice}`;
 }
 function normalizeAnswer(interaction, answer) {
