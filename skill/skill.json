@@ -5,6 +5,6 @@
   "schemaVersion": "confirm-protocol.skill.request/1.0",
   "endpoint": "https://cli.tax/Cf8Pr7Tm2Q",
   "method": "POST",
-  "version": "v7.0.41",
+  "version": "v7.0.42",
   "type": "Skill"
 }
